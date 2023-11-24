@@ -24,7 +24,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 //@ResponseBody
-@CrossOrigin(allowedHeaders = "*")
+@CrossOrigin
 @Component
 public class CodyController {
     //@GetMapping("/")
@@ -54,7 +54,7 @@ public class CodyController {
         List<CodyResponseBody> responseBodies = new ArrayList<>();
 
         elements = driver.findElements(By.className("style-list-thumbnail__img"));
-        for (int i =0 ; i < 9; ++i) {
+        for (int i =1 ; i < 10; ++i) {
             System.out.println(elements.get(i).getAttribute("src"));
             CodyResponseBody cr = new CodyResponseBody();
 //            cr.setCody_url(elements.get(i).getAttribute("src"));

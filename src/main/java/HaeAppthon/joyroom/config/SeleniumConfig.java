@@ -14,6 +14,7 @@ public class SeleniumConfig {
 //        System.setProperty("webdriver.chrome.driver", "[크롬 드라이버 경로]");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
+        options.addArguments("headless");
         return new ChromeDriver(options);
     }
 }
